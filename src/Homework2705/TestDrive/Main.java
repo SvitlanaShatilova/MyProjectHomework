@@ -29,12 +29,12 @@ Year:  1967
 public class Main {
     public static void main(String[] args) {
         Ford ford1 = new Ford("Ford Mustang", 257.0, 49, 110000.0);
-       // ford1.infoCar();
         KIA kia1 = new KIA("KIA Rio", 260.0,290,56000.15);
-     //   kia1.infoCar();
+        ford1.infoCar();     //перевірка друку
+        kia1.infoCar();
 
        CheckCar checkCar = new CheckCar();
-       checkCar.addListCar();
+     //  checkCar.addListCar();
 
 
 

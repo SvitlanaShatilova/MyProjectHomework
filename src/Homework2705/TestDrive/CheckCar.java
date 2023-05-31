@@ -14,7 +14,7 @@ public class CheckCar {
     }
         public void addListCar(UnknownCar car) {
         checkCars = increaseLength(checkCars);
-        checkCars[checkCars.length - 1] = car;
+  //      checkCars[checkCars.length - 1] = car; //помилка?
     }
 
 
