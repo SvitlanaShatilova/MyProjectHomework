@@ -14,7 +14,7 @@ public class CheckCar {
     }
         public void addListCar(UnknownCar car) {
         checkCars = increaseLength(checkCars);
-        checkCars[checkCars.length - 1] = car; //помилка?
+        checkCars[checkCars.length - 1] = car;
     }
 
 
@@ -36,12 +36,34 @@ public class CheckCar {
     public UnknownCar[] maxSpeedCar(UnknownCar[] unknownCars){
         UnknownCar [] maxSpeedCar = new UnknownCar[1];
         maxSpeedCar[0] = unknownCars[0];
-        for (int i =0; i<unknownCars.length-1; i++){
+        for (int i =0; i<unknownCars.length; i++){
             if (unknownCars[i].speed > maxSpeedCar[0].speed) maxSpeedCar[0]=unknownCars[i];
         }return maxSpeedCar;
     }
     public void printMaxSpeed(UnknownCar[] unknownCars){
         UnknownCar [] printMaxSpeed = maxSpeedCar(unknownCars);
         printList(printMaxSpeed);
+    }
+    public UnknownCar[] maxPriceCar(UnknownCar[] unknownCars){
+        UnknownCar [] maxPriceCar = new UnknownCar[1];
+        maxPriceCar[0] = unknownCars[0];
+        for (int i =0; i<unknownCars.length; i++){
+            if (unknownCars[i].price > maxPriceCar[0].price) maxPriceCar[0]=unknownCars[i];
+        }return maxPriceCar;
+    }
+    public void printMaxPrice(UnknownCar[] unknownCars){
+        UnknownCar [] printMaxPrice = maxPriceCar(unknownCars);
+        printList(printMaxPrice);
+    }
+    public UnknownCar[] maxPowerCar(UnknownCar[] unknownCars){
+        UnknownCar [] maxPowerCar = new UnknownCar[1];
+        maxPowerCar[0] = unknownCars[0];
+        for (int i =0; i<unknownCars.length; i++){
+            if (unknownCars[i].power > maxPowerCar[0].power) maxPowerCar[0]=unknownCars[i];
+        }return maxPowerCar;
+    }
+    public void printMaxPower(UnknownCar[] unknownCars){
+        UnknownCar [] printMaxPower = maxPowerCar(unknownCars);
+        printList(printMaxPower);
     }
 }

@@ -28,17 +28,21 @@ Year:  1967
 * Статичні змінні використовувати заборонено*/
 public class Main {
     public static void main(String[] args) {
-        Ford ford1 = new Ford("Ford Mustang", 257.0, 49, 110000.0);
-        KIA kia1 = new KIA("KIA Rio", 260.0,290,56000.15);
-        //ford1.infoCar();     //перевірка друку
-       // kia1.infoCar();
+       Ford ford1 = new Ford("Ford Mustang", 270.0, 299, 11000.0);
+       KIA kia1 = new KIA("KIA Rio", 260.0,290,56000.15);
+       Mitsubishi mitsubishi1 = new Mitsubishi("Mitsubishi Colt", 260, 266, 70230.0);
+       Toyota toyota1 = new Toyota("Toyota 2000GT", 300.0,150, 65421.0);
 
        CheckCar checkCar = new CheckCar();
        checkCar.addListCar(ford1);
-        checkCar.addListCar(kia1);
+       checkCar.addListCar(kia1);
+       checkCar.addListCar(mitsubishi1);
+       checkCar.addListCar(toyota1);
 
-     // checkCar.printList(checkCar.checkCars);
+      //checkCar.printList(checkCar.checkCars);
       checkCar.printMaxSpeed(checkCar.checkCars);
+      checkCar.printMaxPrice(checkCar.checkCars);
+      checkCar.printMaxPower(checkCar.checkCars);
 
 
 
