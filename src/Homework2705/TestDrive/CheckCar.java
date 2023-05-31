@@ -33,15 +33,15 @@ public class CheckCar {
             car[i].infoCar();
         }
     }
-//    public void maxSpeedCar(UnknownCar[] unknownCars){
-//        UnknownCar [] maxSpeedCar = new UnknownCar[1];
-//        maxSpeedCar[0] = unknownCars[0];
-//        for (int i =0; i<unknownCars.length-1; i++){
-//            if (maxSpeedCar[0].speed<unknownCars[i].speed) maxSpeedCar[0]=unknownCars[i];
-//        }for (UnknownCar i : maxSpeedCar) System.out.print(i);
-//    }
-//    public void printMaxSpeed(UnknownCar[] unknownCars){
-//        UnknownCar [] printMaxSpeed = maxSpeedCar(unknownCars);
-//        printMaxSpeed[0].infoCar();
-//    }
+    public UnknownCar[] maxSpeedCar(UnknownCar[] unknownCars){
+        UnknownCar [] maxSpeedCar = new UnknownCar[1];
+        maxSpeedCar[0] = unknownCars[0];
+        for (int i =0; i<unknownCars.length-1; i++){
+            if (unknownCars[i].speed > maxSpeedCar[0].speed) maxSpeedCar[0]=unknownCars[i];
+        }return maxSpeedCar;
+    }
+    public void printMaxSpeed(UnknownCar[] unknownCars){
+        UnknownCar [] printMaxSpeed = maxSpeedCar(unknownCars);
+        printList(printMaxSpeed);
+    }
 }

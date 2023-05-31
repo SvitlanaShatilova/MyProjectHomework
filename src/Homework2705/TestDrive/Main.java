@@ -30,11 +30,15 @@ public class Main {
     public static void main(String[] args) {
         Ford ford1 = new Ford("Ford Mustang", 257.0, 49, 110000.0);
         KIA kia1 = new KIA("KIA Rio", 260.0,290,56000.15);
-        ford1.infoCar();     //перевірка друку
-        kia1.infoCar();
+        //ford1.infoCar();     //перевірка друку
+       // kia1.infoCar();
 
        CheckCar checkCar = new CheckCar();
        checkCar.addListCar(ford1);
+        checkCar.addListCar(kia1);
+
+     // checkCar.printList(checkCar.checkCars);
+      checkCar.printMaxSpeed(checkCar.checkCars);
 
 
 
