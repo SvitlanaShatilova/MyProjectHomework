@@ -34,7 +34,9 @@ public class Main {
         kia1.infoCar();
 
        CheckCar checkCar = new CheckCar();
-     //  checkCar.addListCar();
+       checkCar.addListCar(ford1);
+
+
 
 
 

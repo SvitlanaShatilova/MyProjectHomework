@@ -7,19 +7,19 @@ package Homework2705.TestDrive;
 - мати метод який повертає найдорожчу машину
 - мати метод який повертає найпотужнішу машину*/
 public class CheckCar {
-    protected CheckCar[] checkCars = new CheckCar[0];
+    protected UnknownCar[] checkCars = new UnknownCar[0];
 
     public CheckCar() {
 
     }
         public void addListCar(UnknownCar car) {
         checkCars = increaseLength(checkCars);
-  //      checkCars[checkCars.length - 1] = car; //помилка?
+        checkCars[checkCars.length - 1] = car; //помилка?
     }
 
 
-    public CheckCar[] increaseLength(CheckCar[] car) {
-        CheckCar[] temp = new CheckCar[car.length + 1];
+    public UnknownCar[] increaseLength(UnknownCar[] car) {
+        UnknownCar[] temp = new UnknownCar[car.length + 1];
         for (int i = 0; i <= car.length; i++) {
             if (i != car.length) {
                 temp[i] = car[i];
@@ -28,11 +28,11 @@ public class CheckCar {
         return temp;
     }
 
-//    public void printList(UnknownCar[] unknownCars) {
-//        for (int i = 0; i < unknownCars.length; i++) {
-//            unknownCars[i].infoCar();
-//        }
-//    }
+    public void printList(UnknownCar[] car) {
+        for (int i = 0; i < car.length; i++) {
+            car[i].infoCar();
+        }
+    }
 //    public void maxSpeedCar(UnknownCar[] unknownCars){
 //        UnknownCar [] maxSpeedCar = new UnknownCar[1];
 //        maxSpeedCar[0] = unknownCars[0];
