@@ -24,7 +24,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println(line);
         System.out.println(version);
-        System.out.println("1 -> Ар-деко\n2 -> Вікторіанській\n3 -> Модерн");
+        System.out.println("1 -> Арт-деко\n2 -> Вікторіанський\n3 -> Модерн");
         int choice = scanner.nextInt();
         if (choice > 0 && choice <= 3) {
             switch (choice) {
@@ -43,7 +43,7 @@ public class Main {
             sofa = fabric.createSofa();
             table = fabric.createTable();
             System.out.println(line);
-            System.out.println("Ви обрали варіант: 2");
+            System.out.println("Ви обрали варіант: " + choice);
             System.out.println("Детальний опис:");
             System.out.printf("Крісло - \"%s\", %.2f %s\n", armChair.getName(), armChair.getPrice(), currency);
             System.out.printf("Диван - \"%s\", %.2f %s\n", sofa.getName(), sofa.getPrice(), currency);
