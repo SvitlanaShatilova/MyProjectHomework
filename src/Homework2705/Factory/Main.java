@@ -43,8 +43,8 @@ public class Main {
             sofa = fabric.createSofa();
             table = fabric.createTable();
             System.out.println(line);
-            System.out.println("Ви обрали варіант: " + choice);
-            System.out.println("Детальний опис:");
+            System.out.println("\u001B[31m"+"Ви обрали варіант: " + choice);
+            System.out.println("Детальний опис:"+"\033[0m");
             System.out.printf("Крісло - \"%s\", %.2f %s\n", armChair.getName(), armChair.getPrice(), currency);
             System.out.printf("Диван - \"%s\", %.2f %s\n", sofa.getName(), sofa.getPrice(), currency);
             System.out.printf("Столик - \"%s\", %.2f %s\n", table.getName(), table.getPrice(), currency);
@@ -53,7 +53,7 @@ public class Main {
 
         } else {
             System.out.println(line);
-            System.out.println("ERROR! Ви ввели невірне значення");
+            System.out.println("\u001B[31m" + "ERROR! Ви ввели невірне значення"+"\033[0m");
         }
     }
 }
