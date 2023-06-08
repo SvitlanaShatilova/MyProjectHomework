@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> num = new ArrayList<>();
 
-        for (int i = 0; i<10; i++){
+        for (int i = 0; i<60; i++){
             num.add(i+ (int) (Math.random()*(100)));
         }
         System.out.println(num);
