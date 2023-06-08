@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
         ArrayList<String> zoo = new ArrayList<>();
+
         zoo.add(0, "Zebra");
         zoo.add(1, "Camel");
         zoo.add(2, "Kangaroo");
