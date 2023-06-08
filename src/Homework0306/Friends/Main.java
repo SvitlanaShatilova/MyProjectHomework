@@ -7,7 +7,7 @@ import java.util.Comparator;
 public class Main {
     public static void main(String[] args) {
         Friends friends = new Friends();
-
+        System.out.println(friends.myFriends);
         Collections.sort(friends.myFriends);
         System.out.println(friends.myFriends);
 
