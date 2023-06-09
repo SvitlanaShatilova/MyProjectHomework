@@ -8,18 +8,19 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> num = new ArrayList<>();
 
-        for (int i = 0; i<60; i++){
-            num.add(i+ (int) (Math.random()*(100)));
+        for (int i = 0; i < 60; i++) {
+            num.add(i + (int) (Math.random() * (100)));
         }
         System.out.println(num);
 
         ListIterator<Integer> numIterator = num.listIterator();
 
         while (numIterator.hasNext()) {
-            System.out.print(numIterator.next()+1 + "  ");
+
+            Integer value = numIterator.next();
+            numIterator.set(value + 1);
         }
+        System.out.println(num);
+
     }
- }
-
-
-
+}
