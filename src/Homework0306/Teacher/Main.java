@@ -13,8 +13,14 @@ public class Main {
         teacher.add("Ігор Володимирович");
         teacher.add("Вікторія Володимирівна");
 
-        System.out.println("Найкращий вчитель " + teacher.get(4));
-        System.out.println("Вчитель самий не дуже: " + teacher.get(1));
+
+        int bestTeacher = teacher.indexOf("Вікторія Володимирівна");
+        int bedTeacher = teacher.indexOf("Тетяна Пантелеївна");
+
+        System.out.println("Найкращий вчитель - " + teacher.get(bestTeacher));
+        System.out.println("Вчитель не дуже - " + teacher.get(bedTeacher));
+
+
 
     }
 }
