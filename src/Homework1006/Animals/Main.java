@@ -17,5 +17,8 @@ public class Main {
 
         Animals animals5 = Animals.TIGER;
         System.out.println(animals5.toString(animals5));
+
+
+
     }
 }

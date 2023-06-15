@@ -19,4 +19,6 @@ public enum Animals {
                 " age=" + age +
                 '}';
     }
+
+
 }
