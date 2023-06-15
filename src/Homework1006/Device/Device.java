@@ -19,7 +19,7 @@ class Device {
 
     @Override
     public String toString() {
-        return "Device: " + "manufacturer =" + manufacturer +", price=" + price + ", serialNumber=" + serialNumber;
+        return "Device: " + "manufacturer =" + manufacturer +", price=" + (int)price + ", serialNumber=" + serialNumber;
     }
 
     public class Monitor {
@@ -39,7 +39,7 @@ class Device {
 
         @Override
         public String toString() {
-            return "Monitor: " + "manufacturer =" + manufacturer +", price=" + price + ", serialNumber=" + serialNumber + ", X="+resolutionX + "Y=" + resolutionY;
+            return "Monitor: " + "manufacturer =" + manufacturer +", price=" + (int)price + ", serialNumber=" + serialNumber + ", X="+resolutionX + "Y=" + resolutionY;
         }
     }
 
