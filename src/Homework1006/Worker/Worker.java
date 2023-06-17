@@ -3,6 +3,7 @@ package Homework1006.Worker;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 /*Описати клас з ім'ям Worker, що містить такі поля:
   прізвище та ініціали працівника;
@@ -13,25 +14,24 @@ import java.util.Collections;
   якщо значення року введено не у відповідному форматі, видає виняток.
   виведення на екран прізвища працівника, стаж роботи якого перевищує введене значення.*/
 public class Worker {
-    public String pib;
-    public String posada;
-    public int rikNaRobotu;
+    protected String pib;
+    protected String posada;
+    protected int rikNaRobotu;
 
-    public Worker(String pib, String posada, int rikNaRobotu) {
+    public Worker(String pib, String posada, int rikNaRobotu) throws UserException {
         this.pib = pib;
         this.posada = posada;
-        this.rikNaRobotu = rikNaRobotu;
-    }
-
-        ArrayList<Worker> workers = new ArrayList<>(5);
-        int num = 0;
-
-        public void addWorker(Worker worker) {
-            workers.add(num, worker);
-            num += 1;
-
+//       if (rikNaRobotu < 1990 && rikNaRobotu > 2023) {
+//            throw new UserException("Ви ввели некоректне значення року");
+//        } else {
+            this.rikNaRobotu = rikNaRobotu;
         }
 
+
+    @Override
+    public String toString() {
+        return "Працівник: " + pib;
+    }
 }
 
 

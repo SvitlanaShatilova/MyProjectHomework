@@ -9,23 +9,36 @@ package Homework1006.Worker;
   якщо значення року введено не у відповідному форматі, видає виняток.
   виведення на екран прізвища працівника, стаж роботи якого перевищує введене значення.*/
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        int stop = 0;
+    public static void main(String[] args) throws UserException{
+        int counter = 1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть дані 5-ти працівників: \n -> Прізвище та ініціали \n -> Назву посади \n -> Рік надходження на роботу");
+        ArrayList<Worker> workers = new ArrayList<>();
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Введіть дані 5-ти працівників: \n -> Прізвище та ініціали \n -> Назву посади \n -> Рік надходження на роботу");
-//       do {
-//           try {
-//               Worker worker1 = new Worker(scanner.next(), scanner.next(), scanner.nextInt());
-//
-//           }catch (Exception e){
-//               System.out.println("Помилка - " + e);
-//               System.out.println("Дані введені не коректно");
-//           }
-//       }while ()
+        do {
+            try {
+                System.out.println("Працівник №" + counter);
+                Worker worker = new Worker(scanner.next(), scanner.next(), scanner.nextInt());
+                if (worker.rikNaRobotu< 1990 && worker.rikNaRobotu > 2023) {
+                    throw new UserException("Ви ввели некоректне значення року");
+                }else {
+                workers.add(worker);
+                counter++;}
+            } catch (UserException e){
+                System.out.println("Ви ввели некоректне значення року" + e);
+            }finally {
+                System.out.println("Введіть нові значення");
+            }
+        } while (counter < 2);
 
+
+        System.out.println(workers);
     }
+
 }
+
+
