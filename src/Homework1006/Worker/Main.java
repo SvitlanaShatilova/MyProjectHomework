@@ -24,20 +24,23 @@ public class Main {
         do {
             try {
                 System.out.println("Працівник №" + counter);
-                Worker worker = new Worker(scanner.next(), scanner.next(), scanner.nextInt());
+                Worker worker = new Worker(scanner.nextLine(), scanner.nextLine(), scanner.nextInt());
                 if (worker.rikNaRobotu < 1990 || worker.rikNaRobotu > 2023) {
                     throw new UserException("Ви ввели некоректне значення року");
                 } else {
                     workers.add(worker);
                     counter++;
                 }
+            }catch (InputMismatchException ex){
+                System.out.println(ex);
+                System.out.println("Введіть нові значення");
             } catch (UserException e) {
                 System.out.println(e);
                 System.out.println("Введіть нові значення");
             } finally {
                 System.out.println();
             }
-        } while (counter < 3);
+        } while (counter < 6);
         Collections.sort(workers, new Comparator<Worker>() {
             @Override
             public int compare(Worker o1, Worker o2) {
