@@ -21,18 +21,25 @@ public class Worker {
     public Worker(String pib, String posada, int rikNaRobotu) throws UserException {
         this.pib = pib;
         this.posada = posada;
-//       if (rikNaRobotu < 1990 && rikNaRobotu > 2023) {
-//            throw new UserException("Ви ввели некоректне значення року");
-//        } else {
-            this.rikNaRobotu = rikNaRobotu;
+        this.rikNaRobotu = rikNaRobotu;
         }
-
-
     @Override
     public String toString() {
         return "Працівник: " + pib;
     }
-}
+    public static int stajRoboty(Worker worker){
+        int staj = 2023 - worker.rikNaRobotu;
+        return staj;
+    }
+    public static void searchStaj(int val, ArrayList <Worker> worker){
+        int staj = 0;
+        for (int i=0; i< worker.size(); i++){
+            staj = stajRoboty(worker.get(i));
+           if (staj > val)
+            System.out.println("Стаж роботи перевищує " + val + " р. - " + worker.get(i));}
+        }
+    }
+
 
 
 
