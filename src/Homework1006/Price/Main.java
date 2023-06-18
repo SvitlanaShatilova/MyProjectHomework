@@ -3,6 +3,7 @@ package Homework1006.Price;
 import Homework1006.Worker.UserException;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*Описати клас з іменем Price, що містить такі поля:
   назву товару;
@@ -16,6 +17,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws UserException {
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println();
+
         Price price1 = new Price("Малятко", "Абетка", 120.00);
         Price price2 = new Price("Антошка", "Коляска", 12500.00);
 
@@ -24,7 +28,7 @@ public class Main {
 
 
         String name = "Антошка";
-       // Price.serchName(pricesList, name); //не працює, чому?
+//        Price.serchName(pricesList, name); //НЕ ПРАЦЮЄ, В ЧОМУ ПОМИЛКА ???
 
       try {
           for (int i = 0; i <= pricesList.size(); i++) {
@@ -35,7 +39,7 @@ public class Main {
                   System.out.println("співпадінь з введеною назвою = " + n);
               }
               if (n==0){
-                  throw new UserException("Такого магазину не існує"); // ЧОМУ ЦЯ ПОМИЛКА СПРАЦБОВУЄ ???
+                  throw new UserException("Такого магазину не існує"); // ЧОМУ ЦЯ ПОМИЛКА СПРАЦЬОВУЄ ???
               }
           }
       }catch (UserException e){

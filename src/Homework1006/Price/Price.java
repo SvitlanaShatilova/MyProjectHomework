@@ -44,12 +44,11 @@ public class Price {
         return "Магазин <<" + nameShop + ">> \nназва товару: " + nameProduct + " - ціна: " + priceProduct + "\n";
     }
 
-    public static void serchName(ArrayList<Price> list, String name) throws UserException {
+    public static void serchName(ArrayList<Price> list, String name)  {
         for (int i = 0; i > list.size(); i++) {
             if (list.get(i).nameShop.equals(name)) {
                 System.out.println("* " + list.get(i));
-            }else {
-                throw new UserException("Такого магазину не існує");
+
             }
         }
     }
