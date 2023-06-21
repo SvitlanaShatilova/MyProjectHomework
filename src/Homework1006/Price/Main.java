@@ -13,6 +13,7 @@ import java.util.ArrayList;
   назва якого введена з клавіатури (якщо такого магазину немає, вивести виняток).*/
 public class Main {
     public static void main(String[] args) throws Exception {
+        int n=0;
 
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println();
@@ -25,23 +26,24 @@ public class Main {
 
 
         String name = "Антошка";
-//        Price.serchName(pricesList, name); //НЕ ПРАЦЮЄ, В ЧОМУ ПОМИЛКА ???
+        Price.serchName(pricesList, name); //НЕ ПРАЦЮЄ, В ЧОМУ ПОМИЛКА ???
 
       try {
-          for (int i = 0; i <= pricesList.size(); i++) {
-              int n=0;
+          for (int i = 0; i < pricesList.size(); i++) {
+
               if (pricesList.get(i).nameShop.equals(name)) {
-                  System.out.println("* " + pricesList.get(i));
+                  System.out.println(" " + pricesList.get(i));
                   n+=1;
                   System.out.println("співпадінь з введеною назвою = " + n);
               }
               if (n==0){
                   throw new Exception("Такого магазину не існує"); // ЧОМУ ЦЯ ПОМИЛКА СПРАЦЬОВУЄ ???
-              }
-          }
+              }}
+
       }catch (Exception e){
           System.out.println(e);
       }
+
     }
 }
 

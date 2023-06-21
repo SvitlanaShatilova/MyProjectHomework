@@ -32,7 +32,8 @@ public class Main {
                 int rik = scanner.nextInt();
                 if (rik < 1990 || rik > 2023) {
                     throw new Exception("Ви ввели некоректне значення року");
-                } else {Worker worker = new Worker(name, posada, rik);
+                } else {
+                    Worker worker = new Worker(name, posada, rik);
                     workers.add(worker);
                     counter++;
                 }
