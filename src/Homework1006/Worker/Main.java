@@ -14,7 +14,7 @@ import java.util.*;
 public class Main {
 
 
-    public static void main(String[] args) throws UserException {
+    public static void main(String[] args) throws Exception {
 
         int counter = 1;
         Scanner scanner = new Scanner(System.in);
@@ -24,21 +24,21 @@ public class Main {
         do {
             try {
                 System.out.println("Працівник №" + counter);
-                Worker worker = new Worker(scanner.nextLine(), scanner.nextLine(), scanner.nextInt());
-                if (worker.rikNaRobotu < 1990 || worker.rikNaRobotu > 2023) {
-                    throw new UserException("Ви ввели некоректне значення року");
-                } else {
+                System.out.println("ПІБ: ");
+                String name = scanner.nextLine();
+                System.out.println("Посада: ");
+                String posada = scanner.nextLine();
+                System.out.println("Рік прийняття на роботу: ");
+                int rik = scanner.nextInt();
+                if (rik < 1990 || rik > 2023) {
+                    throw new Exception("Ви ввели некоректне значення року");
+                } else {Worker worker = new Worker(name, posada, rik);
                     workers.add(worker);
                     counter++;
                 }
-            }catch (InputMismatchException ex){
-                System.out.println(ex);
-                System.out.println("Введіть нові значення");
-            } catch (UserException e) {
+            }catch (Exception e){
                 System.out.println(e);
                 System.out.println("Введіть нові значення");
-            } finally {
-                System.out.println();
             }
         } while (counter < 6);
         Collections.sort(workers, new Comparator<Worker>() {

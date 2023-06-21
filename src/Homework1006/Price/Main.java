@@ -1,9 +1,6 @@
 package Homework1006.Price;
 
-import Homework1006.Worker.UserException;
-
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /*Описати клас з іменем Price, що містить такі поля:
   назву товару;
@@ -15,7 +12,7 @@ import java.util.Scanner;
   виведення на екран інформації про товари, що продаються в магазині,
   назва якого введена з клавіатури (якщо такого магазину немає, вивести виняток).*/
 public class Main {
-    public static void main(String[] args) throws UserException {
+    public static void main(String[] args) throws Exception {
 
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println();
@@ -39,10 +36,10 @@ public class Main {
                   System.out.println("співпадінь з введеною назвою = " + n);
               }
               if (n==0){
-                  throw new UserException("Такого магазину не існує"); // ЧОМУ ЦЯ ПОМИЛКА СПРАЦЬОВУЄ ???
+                  throw new Exception("Такого магазину не існує"); // ЧОМУ ЦЯ ПОМИЛКА СПРАЦЬОВУЄ ???
               }
           }
-      }catch (UserException e){
+      }catch (Exception e){
           System.out.println(e);
       }
     }

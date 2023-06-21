@@ -1,7 +1,5 @@
 package Homework1006.Price;
 
-import Homework1006.Worker.UserException;
-
 import java.util.*;
 
 /*Описати клас з іменем Price, що містить такі поля:

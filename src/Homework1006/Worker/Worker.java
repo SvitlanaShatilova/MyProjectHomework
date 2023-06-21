@@ -18,7 +18,7 @@ public class Worker {
     protected String posada;
     protected int rikNaRobotu;
 
-    public Worker(String pib, String posada, int rikNaRobotu) throws UserException {
+    public Worker(String pib, String posada, int rikNaRobotu) {
         this.pib = pib;
         this.posada = posada;
         this.rikNaRobotu = rikNaRobotu;
