@@ -1,38 +1,43 @@
 package Homework1006.MyListEx7;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /*Створіть клас MyList.
 Реалізуйте у найпростішому наближенні можливість використання його екземпляра аналогічно екземпляру класу List.
 Мінімально необхідний інтерфейс взаємодії з екземпляром повинен включати метод додавання елемента,
 індексатор для отримання значення елемента за вказаним індексом і властивість тільки для читання для
 отримання загальної кількості елементів.*/
-public class MyList implements MyList_Interface{
-    ArrayList<String> myList = new ArrayList<>();
+public class MyList {
 
-    @Override
-    public void addElement(int index, String name) {
-        myList.add(index, name);
+    String name;
 
+    public MyList() {
+    }
+
+    public ArrayList<MyList> addNew(ArrayList<MyList> my, MyList myList) {
+        ArrayList <MyList> temp = my;
+        temp.add(myList);
+         return temp;
+    }
+
+    public MyList getElement(ArrayList<MyList> my, int index){
+        ArrayList <MyList> temp = my;
+        return temp.get(index);
+    }
+
+    public String readElement(ArrayList<MyList> my){
+        ArrayList <MyList> temp = my;
+        return "Загальна кількість елементів = " + temp.size();
     }
 
     @Override
-    public void getElement(int index) {
-        System.out.println(myList.get(index));
+    public String toString() {
+        return "MyList{" +
+                "name='" + name + '\'' +
+                '}';
     }
+}
 
-    @Override
-    public void readElement() {
-        System.out.println(myList.size());
-        }
 
-    public static void main(String[] args) { //перевірка методів
-        MyList myList1 = new MyList();
-        myList1.addElement(0, "Hello");
-        myList1.getElement(0);
-        myList1.readElement();
-    }
-    }
 
 

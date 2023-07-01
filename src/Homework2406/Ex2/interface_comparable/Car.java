@@ -24,26 +24,20 @@ public class Car implements Comparable { //<Car>{
 
     // Сортируем по скорости/цене
     public int compareTo(Object o) {    // public int compareTo(Car o) {
-        int temp = this.speed - ((Car) o).speed;   // int temp = this.speed - o.speed;
+        int temp = this.speed - ((Car)o).speed;   // int temp = this.speed - o.speed;
         if (temp == 0) {
-            int temp2 = this.price - ((Car) o).price;
-            {
-                if (temp2 == 0) {
-                    Objects.equals(model, this.model);
-                    {
-                        if (true) {
-                            return this.color.compareTo(((Car) o).color);
-                        }
-                    }return this.model.compareTo(((Car) o).model);
+            int temp1 = this.price - ((Car)o).price;
+            if (temp1 ==0) {
+                boolean temp2 = this.model.equals(((Car) o).model);
+                if (temp2 == true) {
+                    return this.color.compareTo(((Car) o).color);
                 }
-            } return this.price - ((Car)o).price;
-
-        } else {
+                 return this.model.compareTo(((Car) o).model);
+            }return this.price - ((Car)o).price;
+        }else {
             return temp;
         }
     }
 }
 
 
-    // Сравнение 2-х строковых значений
-    // return this.model.compareTo((Car)o).model);

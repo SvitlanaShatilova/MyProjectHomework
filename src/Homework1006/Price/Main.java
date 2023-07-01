@@ -19,7 +19,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Назва магазину №1: ");
         String nameShop1 = scanner.nextLine();
+
         System.out.println("Назва продукту: ");
+
         String nameProduct1 = scanner.nextLine();
         System.out.println("Ціна продукту: ");
         double priceProduct1 = scanner.nextDouble();
