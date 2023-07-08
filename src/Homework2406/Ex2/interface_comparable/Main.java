@@ -14,7 +14,7 @@ public class Main {
 
         Car c4 = new Car(230, 10000, "Mercedes", "Green");
 
-        Car c5 = new Car(190, 8000, "Mercedes1", "Red4");
+        Car c5 = new Car(180, 8000, "Mercedes1", "Red4");
     Car[] c = {c1, c2, c3, c4, c5};
 
     Arrays.sort(c);   // ClassCastException
