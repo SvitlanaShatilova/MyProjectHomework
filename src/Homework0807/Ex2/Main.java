@@ -31,7 +31,7 @@ public class Main {
 
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
-       LinkedList<Integer> number = new LinkedList<>();
+       LinkedList<Integer> number;
         System.out.println("Введіть N: ");
         int n = sc.nextInt();
         number = getIntegerList(n);
