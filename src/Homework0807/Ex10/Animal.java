@@ -11,4 +11,11 @@ public class Animal {
     final static String name = "Bulya";
     private int age = 5;
 
+    public String getVid() {
+        return vid;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }

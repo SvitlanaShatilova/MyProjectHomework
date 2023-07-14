@@ -10,28 +10,47 @@ import java.lang.reflect.Field;
  Final
  Static*/
 public class Cat {
-    public static void main(String[] args) {
-       try {
-           Class cl = Animal.class;
-           System.out.println(cl);
-           Field[] field = cl.getDeclaredFields();
-           for (Field temp : field) {
-               Class fildType = temp.getType();
-               System.out.println("Name = " + temp.getName());
-               System.out.println("Type = " + fildType.getName());
-           }
-               Animal animal = new Animal();
-               Field field1 = cl.getDeclaredField("age");
-               field1.setAccessible(true);
-               System.out.println("age old = " + field1.getInt(animal));
-               field1.setInt(animal, 222);
-               System.out.println("age new = " + field1.getInt(animal));
+    public static void main(String[] args) throws IllegalAccessException {
+        try {
+            try {
+
+                Class cl = Animal.class;
+                System.out.println(cl);
+                Field[] field = cl.getDeclaredFields();
+                for (Field temp : field) {
+                    System.out.println("Name = " + temp.getName());
+                    System.out.println("Type = " + temp.getType());
+                }
+                System.out.println("===============================");
+
+                Animal animal = new Animal();
+
+                Field field1 = cl.getDeclaredField("vid");
+                field1.setAccessible(true);
+                System.out.println("vid old = " + animal.getVid());
+                field1.set(animal, "Cat");
+                System.out.println("vid new = " + animal.getVid());
+                field1.setAccessible(false);
+                Field field2 = cl.getDeclaredField("age");
+                field2.setAccessible(true);
+                System.out.println("age old = " + animal.getAge());
+                field2.set(animal, 8);
+                field2.setAccessible(false);
+                System.out.println("age new = " + animal.getAge());
+                Field field3 = cl.getDeclaredField("name");
+                field3.setAccessible(true);
+                System.out.println(animal.name);
+                field3.set(animal, "Kitty");
+                field3.setAccessible(false);
+                System.out.println(" new name = " + animal.name);
 
 
+        } catch (IllegalAccessException ex) {
+                System.out.println("name змінити неможливо ! " + ex);
 
-
-       }catch (Exception ex){
-           ex.printStackTrace();
-       }
+        }} catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
+
