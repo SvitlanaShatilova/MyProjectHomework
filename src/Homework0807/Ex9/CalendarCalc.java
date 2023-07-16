@@ -72,10 +72,10 @@ public class CalendarCalc {
         Calendar calendar = new GregorianCalendar();
         calendar.set(o.getYear(), o.getMonth(), o.getDate(), o.getHour(), o.getMinute(), o.getSecond());
         Calendar calendar2 = Calendar.getInstance();
-        System.out.println("******************************");
+        System.out.println("============================");
         System.out.println("Поточна дата: " + calendar2.getTime());
         System.out.println("Дата народження: " + calendar.getTime());
-        System.out.println("============================");
+        System.out.println("***");
 
         int dayNaw = calendar2.get(Calendar.DAY_OF_MONTH);
         int dayBorn = calendar.get(Calendar.DAY_OF_MONTH);
@@ -98,7 +98,7 @@ public class CalendarCalc {
                 yearsOld = years - 1;
             }
         }
-//рахуємо кількість повних місяців:
+//рахуємо кількість місяців:
         if (monthNow<monthBorn){
             monthOld = (monthNow+12-monthBorn);
         } else if (monthNow>monthBorn) {
@@ -107,7 +107,7 @@ public class CalendarCalc {
             monthOld = 0;
         }
 
-        // блок для перевірки кількості днів у місяці
+//блок для перевірки кількості днів у місяці
         Calendar temp30 = Calendar.getInstance();
         temp30.add(Calendar.DAY_OF_MONTH, 30);
         Calendar temp31 = Calendar.getInstance();;
@@ -116,12 +116,6 @@ public class CalendarCalc {
         temp28.add(Calendar.DAY_OF_MONTH, 28);
         Calendar temp29 = Calendar.getInstance();;
         temp29.add(Calendar.DAY_OF_MONTH, 29);
-//        System.out.println("********************");
-//        System.out.println(temp28.get(Calendar.DAY_OF_MONTH));
-//        System.out.println(temp29.get(Calendar.DAY_OF_MONTH));
-//        System.out.println(temp30.get(Calendar.DAY_OF_MONTH));
-//        System.out.println(temp31.get(Calendar.DAY_OF_MONTH));
-//        System.out.println("********************");
 
 //розрахунок кількості днів:
         int dayOld;
@@ -143,8 +137,7 @@ public class CalendarCalc {
         }else {
             dayOld = 0;
         }
-        //розрахунок годин, хвилин, секунд:
-
+//розрахунок годин:
         int hourNow =  calendar2.get(Calendar.HOUR_OF_DAY);
         int hourBorn = calendar.get(Calendar.HOUR_OF_DAY);
         int hourOld;
@@ -155,7 +148,7 @@ public class CalendarCalc {
         }else {
             hourOld = 0;
         }
-
+//розрахунок хвилин:
         int minNow =  calendar2.get(Calendar.MINUTE);
         int minBorn = calendar.get(Calendar.MINUTE);
         int minOld;
@@ -166,7 +159,7 @@ public class CalendarCalc {
         }else {
             minOld = 0;
         }
-
+//розрахунок секунд:
         int secNow =  calendar2.get(Calendar.SECOND);
         int secBorn = calendar.get(Calendar.SECOND);
         int secOld;
@@ -178,9 +171,6 @@ public class CalendarCalc {
             secOld = 0;
         }
 
-//        System.out.println("«Вам виповнилося " + yearsOld +" роки(ів), " + monthOld + " місяць(ів), "
-//                + dayOld + " дні(в), " + hourOld + " годин(и), " + minOld + " хвилин(и) та " + secOld + " секунд»");
-//
         return "«Вам виповнилося " + yearsOld +" роки(ів), " + monthOld + " місяць(ів), "
                 + dayOld + " дні(в), " + hourOld + " годин(и), " + minOld + " хвилин(и) та " + secOld + " секунд(и)»";
     }
