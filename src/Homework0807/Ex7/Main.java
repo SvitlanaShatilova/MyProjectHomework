@@ -18,6 +18,8 @@ public class Main {
             while ((temp = br.readLine()) != null) {
                 System.out.println(temp);
             }
+             br.close();
+             fr.close();
          }
     }
 
