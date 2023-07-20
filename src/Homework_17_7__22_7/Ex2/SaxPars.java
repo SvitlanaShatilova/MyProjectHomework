@@ -6,7 +6,11 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
+/**Створіть клас, використовуючи SAXParser, де опишіть ієрархію XML файлу.
+ * Необхідно, щоб проект створював
+ * XML-файл і будував дерево (місто, назва вулиці, будинок).
+ * У місті використовуйте аттрибут
+ * (наприклад, <city size=”big>Kiev</city>).*/
 public class SaxPars {
     public static void saxParsAdress(){
         final String fileCity = "C:\\Users\\User\\IdeaProjects\\MyProjectHomework\\src\\Homework_17_7__22_7\\Ex2\\city.xml";
