@@ -42,14 +42,14 @@ public class Price {
         return "Магазин <<" + nameShop + ">> \nназва товару: " + nameProduct + " - ціна: " + priceProduct + "\n";
     }
 
-    public static void serchName(ArrayList<Price> list, String name)  {
-        ArrayList <Price> temp = new ArrayList<>();
-        temp = list;
-        for (int i = 0; i < temp.size(); i++) {
-            if (temp.get(i).nameShop.equals(name)) {
-                System.out.println("* " + temp.get(i));
-
-            }
-        }
-    }
+//    public static void serchName(ArrayList<Price> list, String name)  {
+//        ArrayList <Price> temp = new ArrayList<>();
+//        temp = list;
+//        for (int i = 0; i < temp.size(); i++) {
+//            if (temp.get(i).nameShop.equals(name)) {
+//                System.out.println("* " + temp.get(i));
+//
+//            }
+//        }
+//    }
 }
