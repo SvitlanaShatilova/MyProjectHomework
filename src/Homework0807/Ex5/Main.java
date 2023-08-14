@@ -6,7 +6,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        File file = new File("C:\\Users\\User\\IdeaProjects\\MyProjectHomework\\src\\Homework0807\\Ex5\\Text");
+        File file = new File("C:\\Users\\User\\IdeaProjects\\MyProjectHomework\\src\\Homework0807\\Ex5\\Text.txt");
 
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);

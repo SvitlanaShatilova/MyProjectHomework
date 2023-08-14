@@ -1,21 +1,17 @@
 package Homework1006.MyListEx7;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         MyList myList = new MyList();
-        myList.name = "TEST";
-        MyList myList1 = new MyList();
-        ArrayList <MyList> myLists = new ArrayList<>();
+        myList.add("Seta");
 
-        myList.addNew(myLists, myList);
-        myList.addNew(myLists, myList1);
+ArrayList <String>  a= new ArrayList<>();
 
-        System.out.println(myList.getElement(myLists, 0));
-        System.out.println(myList.getElement(myLists, 1));
-
-        System.out.println(myList.readElement(myLists));
+a.add("qqqqqqqqq");
+        System.out.println(myList);
 
     }
 }
