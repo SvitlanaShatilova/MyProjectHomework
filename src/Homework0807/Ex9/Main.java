@@ -17,6 +17,9 @@ public class Main {
 
         CalendarCalc esha = new CalendarCalc(2009, 2, 22, 10,00,00);
         System.out.println("Єша = " + esha.getPeriodBorn(esha));
+//місяць в програмі від 0 до 11 відповідно реальним 1 - 12
+        CalendarCalc eshaKiril = new CalendarCalc(2023, 0, 21, 18,00,00);
+        System.out.println("Єша Kiril = " + eshaKiril.getPeriodBorn(eshaKiril));
 
     }
 }
